@@ -1,0 +1,19 @@
+{
+  "name": "schema-faker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/json-schema": "^7.0.3",
+    "json-schema-faker": "^0.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^11.13.7"
+  }
+}
