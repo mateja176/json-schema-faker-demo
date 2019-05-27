@@ -1,9 +1,15 @@
-import * as jsf from 'json-schema-faker';
 import { JSONSchema7 } from 'json-schema';
+import * as jsf from 'json-schema-faker';
 
 jsf.option({
   alwaysFakeOptionals: true,
 });
+
+declare module 'json-schema' {
+  interface JSONSchema7 {
+    chance?: string;
+  }
+}
 
 const personalInformationSchema: JSONSchema7 = {
   type: 'object',
@@ -39,6 +45,10 @@ const personalInformationSchema: JSONSchema7 = {
           type: 'string',
         },
       },
+    },
+    lastName: {
+      type: 'string',
+      chance: 'last',
     },
   },
 };
